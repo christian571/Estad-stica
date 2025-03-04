@@ -10,7 +10,6 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from scipy.stats import skew, kurtosis
 
 # 📌 Función para generar gráficos
-
 def generar_grafico(numeros, tipo):
     if tipo == "tendencia":
         plt.figure(figsize=(14, 7))  # Tamaño más grande para el gráfico de tendencia
@@ -213,3 +212,5 @@ def calcular_radiacion(request):
     except Exception as e:
         print("❌ Error procesando el archivo:", str(e))
         return Response({"error": f"No se pudo procesar el archivo. Verifica que el formato sea correcto ({str(e)})"}, status=400)
+    
+    #cambio nuevo
