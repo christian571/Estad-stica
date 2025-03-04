@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda - Calculadoras</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: #0056b3;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ayuda - Conceptos Básicos y Uso de las Calculadoras</h1>
+
+        <p>
+            La <strong>Calculadora Estadística</strong> te permite calcular diversas métricas estadísticas a partir de una lista de números.
+        </p>
+
+
+        <h2>Ejemplo de Uso</h2>
+        <p>
+            Si ingresas los datos <code>5, 10, 15, 20, 25, 30, 35, 40, 45, 50</code>, obtendrás los siguientes resultados:
+        </p>
+        <p>
+            <strong>Media:</strong> 27.5
+        </p>
+        <p>
+            <strong>Mediana:</strong> 27.5
+        </p>
+        <p>
+            <strong>Moda:</strong> No hay moda (todos los valores son únicos)
+        </p>
+        <p>
+            <strong>Varianza:</strong> 187.5
+        </p>
+        <p>
+            <strong>Desviación Estándar:</strong> 13.6931
+        </p>
+        <p>
+            <strong>Sesgo:</strong> 0
+        </p>
+        <p>
+            <strong>Curtosis:</strong> -1.2
+        </p>
+        <p>
+            <strong>Cuartiles:</strong> Q1 = 16.25, Q2 = 27.5, Q3 = 38.75
+        </p>
+
+
+        <h2>Conceptos Basico</h2>
+        
+        <p>
+            <strong>Media:</strong> Es el promedio de los números. Se calcula sumando todos los valores y dividiendo por la cantidad de valores.
+            <br>
+            $$ \text{Media} = \frac{\sum_{i=1}^{n} x_i}{n} $$
+        </p>
+        <p>
+            <strong>Mediana:</strong> Es el valor que se encuentra en el medio de un conjunto de datos ordenados.
+            <br>
+            $$ \text{Mediana} = \begin{cases}
+            \text{Valor en la posición } \frac{n + 1}{2} & \text{(si } n \text{ es impar)} \\
+            \frac{\text{Valor en la posición } \frac{n}{2} + \text{Valor en la posición } \frac{n}{2} + 1}{2} & \text{(si } n \text{ es par)}
+            \end{cases} $$
+        </p>
+        <p>
+            <strong>Moda:</strong> Es el valor que aparece con más frecuencia en un conjunto de datos.
+            <br>
+            $$ \text{Moda} = \text{Valor con la mayor frecuencia} $$
+        </p>
+        <p>
+            <strong>Varianza:</strong> Mide la dispersión de los datos respecto a la media. Se calcula como el promedio de las diferencias al cuadrado entre cada valor y la media.
+            <br>
+            $$ \text{Varianza} = \frac{\sum_{i=1}^{n} (x_i - \text{Media})^2}{n} $$
+        </p>
+        <p>
+            <strong>Desviación Estándar:</strong> Es la raíz cuadrada de la varianza y mide la dispersión de los datos.
+            <br>
+            $$ \text{Desviación Estándar} = \sqrt{\text{Varianza}} $$
+        </p>
+        <p>
+            <strong>Sesgo:</strong> Mide la asimetría de la distribución de los datos.
+            <br>
+            $$ \text{Sesgo} = \frac{n}{(n - 1)(n - 2)} \sum_{i=1}^{n} \left( \frac{x_i - \text{Media}}{\text{Desviación Estándar}} \right)^3 $$
+        </p>
+        <p>
+            <strong>Curtosis:</strong> Mide la "cola" de la distribución de los datos.
+            <br>
+            $$ \text{Curtosis} = \frac{n(n + 1)}{(n - 1)(n - 2)(n - 3)} \sum_{i=1}^{n} \left( \frac{x_i - \text{Media}}{\text{Desviación Estándar}} \right)^4 - \frac{3(n - 1)^2}{(n - 2)(n - 3)} $$
+        </p>
+        <p>
+            <strong>Cuartiles:</strong> Dividen los datos en cuatro partes iguales. Q1 es el primer cuartil (25%), Q2 es la mediana (50%), y Q3 es el tercer cuartil (75%).
+            <br>
+            $$ Q1 = \text{Valor en la posición } \frac{n + 1}{4} $$
+            $$ Q2 = \text{Mediana} $$
+            $$ Q3 = \text{Valor en la posición } \frac{3(n + 1)}{4} $$
+        </p>
+
+        <h3>Gráficos</h3>
+        <p>
+            <strong>Gráfico de Tendencia:</strong> Muestra la evolución de los datos a lo largo del tiempo o de un índice. Es útil para identificar patrones o tendencias en los datos.
+        </p>
+        <p>
+            <strong>Gráfico de Histograma:</strong> Representa la distribución de los datos en intervalos (bins). Muestra la frecuencia con la que ocurren los valores dentro de cada intervalo.
+        </p>
+        <p>
+            <strong>Gráfico de Caja y Bigote:</strong> Muestra la distribución de los datos a través de sus cuartiles. La caja representa el rango intercuartílico (Q1 a Q3), y los "bigotes" representan los valores mínimo y máximo.
+        </p>
+
+        <h1>Calculadora de Radiación Solar</h1>
+        <p>
+            Esta calculadora permite analizar datos de radiación solar cargados desde un archivo Excel. Los datos deben estar en una columna etiquetada como <strong>"Radiación Solar (W/m²)"</strong>.
+        </p>
+        <p>
+            <strong>Radiación Total:</strong> Es la suma de todos los valores de radiación.
+            <br>
+            $$ \text{Radiación Total} = \sum_{i=1}^{n} \text{Radiación}_i $$
+        </p>
+        <p>
+            <strong>Radiación Promedio:</strong> Es el promedio de los valores de radiación.
+            <br>
+            $$ \text{Radiación Promedio} = \frac{\sum_{i=1}^{n} \text{Radiación}_i}{n} $$
+        </p>
+        <p>
+            <strong>Media, Mediana, Moda, Varianza, Desviación Estándar, Sesgo, Curtosis, Cuartiles y los graficos:</strong> Se calculan de la misma manera que en la calculadora estadística.
+        </p>
+
+        <a href="{% url 'index' %}" class="btn">Volver al Menú Principal</a>
+    </div>
+</body>
+</html>
